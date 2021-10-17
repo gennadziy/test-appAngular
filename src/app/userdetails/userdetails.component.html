@@ -1,0 +1,28 @@
+
+<div class="card-panel hoverable">
+<!--  <h4>{{user.username | uppercase}}</h4>-->
+</div>
+
+<button (click)="list()" class="btn btn-danger" appHover>Back to Test List</button><br>
+<button class="btn btn-danger" routerLink="">BACK</button>
+
+<hr/>
+<table   class="card-panel hoverable">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>EMAIL</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td>{{ loginService.getCurrentUser() | uppercase }}</td>
+<!--    <td>{{ user.planet_type | uppercase}}</td>-->
+
+  </tr>
+  </tbody>
+</table>
+
+

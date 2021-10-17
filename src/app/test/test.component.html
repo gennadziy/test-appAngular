@@ -1,0 +1,34 @@
+<div class="col-md-6">
+  <input placeholder="Search..." id="first_name2" type="text" class="validate" [(ngModel)]="searchTest" >
+  <a>{{searchTest}}</a>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>surname</th>
+      <th>date</th>
+      <th>
+        <button class="btn btn-danger" (click)="ngOnInitSort()">SORT</button><a></a>
+        <button class="btn btn-danger" (click)="ngOnInit()">SORT1</button>
+<!--        <button class="btn btn-danger" (click)="loginService.getCurrentUser()">USER ID</button>-->
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let test of tests | search: searchTest  ">
+      <td appStyle>{{test.id}}</td>
+      <td>{{test.name| uppercase }}</td>
+      <td>{{test.surname | uppercase}}</td>
+      <td>{{test.date | date: 'dd-MM-yyyy'}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteTest(test)"> Delete Test</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+<!--  <input [(ngModel)]="counter">-->
+<!--  <button class="btn btn-danger" (click)="increase()">+</button>-->
+<!--  <button class="btn btn-danger" (click)="decrease()">-</button>-->
+<!--  <UL>{{counter}}</UL>-->
+</div>

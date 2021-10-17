@@ -1,0 +1,24 @@
+<div class="col-md-6">
+  <button class="btn btn-danger" routerLink="">BACK</button>
+
+  <h2 class="text-center">Add Test</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="name" [(ngModel)]="user.name" placeholder="Name" name="name" class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="surname">Designation:</label>
+      <input [(ngModel)]="user.surname" placeholder="Surname" name="designation" class="form-control" id="surname" value="SYCHYK" placeholder="surname">
+    </div>
+
+    <div class="form-group">
+      <label for="date">Employee Id</label>
+      <input [(ngModel)]="user.date" placeholder="Date" type=date name="Date" class="form-control" id="date">
+    </div>
+
+    <button class="btn btn-success" (click)="createTest()">Create</button>
+
+  </form>
+  </div>
